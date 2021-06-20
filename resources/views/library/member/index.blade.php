@@ -83,8 +83,8 @@
                                         ?>
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-success">Edit</a>
-                                        <a href="" class="btn btn-danger">Delete</a>
+                                        <a href="{{ route('members.edit' , ['id' => $mem->member_id]) }}" class="btn btn-success">Edit</a>
+                                        <a href="{{ route('members.delete' , ['id' => $mem->member_id]) }}" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

@@ -41,7 +41,17 @@
                                     <th scope="row">{{ $stu->student_id }}</th>
                                     <td>{{ $stu->first_name }}  {{ $stu->last_name }}</td>
                                     <td>{{ $stu->birthday }}</td>
-                                    <td>{{ $stu->gender }}</td>
+                                    <td>
+                                        <?php
+                                        if($stu->gender == '0'){
+                                            echo 'Female';
+                                        }else if($stu->gender == '1'){
+                                            echo 'Male';
+                                        }else{
+                                            echo 'Other';
+                                        }
+                                        ?>
+                                    </td>
                                     <td>{{ $stu->address }}</td>
                                     <td>{{ $stu->phone_number }}</td>
                                     <td>{{ $stu->card_expty_date }}</td>

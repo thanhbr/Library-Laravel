@@ -13,7 +13,7 @@
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" style="display:flex; justify-content: center;">
                     <div class="card card-primary m-5" style="width: 50%">
                         <div class="card-header">
                             <h3 class="card-title">Edit Student</h3>
@@ -38,9 +38,21 @@
                                     <input type="date" class="form-control" id="birthday"
                                            value="{{ $edit_stu->birthday }}" name="birthday">
 
-                                    <label for="gender">Gender</label>
-                                    <input type="text" class="form-control" id="gender"
-                                           value="{{ $edit_stu->gender }}" name="gender">
+                                    <label>Gender</label>
+                                    <select name="gender" class="form-control select2" style="width: 100%;">
+                                        <?php
+                                        if($edit_stu->gender == '0'){
+                                            echo '<option value="0" selected="selected">Female</option>
+                                                        <option value="1">Male</option><option value="2">Other</option>';
+                                        }else if($edit_stu->gender == '1'){
+                                            echo '<option value="0">Female</option>
+                                                        <option value="1" selected="selected">Male</option><option value="2">Other</option>';
+                                        }else{
+                                            echo '<option value="0">Female</option>
+                                                        <option value="1">Male</option><option value="2" selected="selected">Other</option>';
+                                        }
+                                        ?>
+                                    </select>
 
                                     <label for="address">Address</label>
                                     <input type="text" class="form-control" id="address"

@@ -34,8 +34,12 @@
                                     <label for="birthday">Birthday</label>
                                     <input type="date" class="form-control" id="birthday" name="birthday">
 
-                                    <label for="gender">Gender</label>
-                                    <input type="text" class="form-control" id="gender" name="gender">
+                                    <label>Gender</label>
+                                    <select name="gender" class="form-control select2" style="width: 100%;">
+                                        <option value="0">Female</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Other</option>
+                                    </select>
 
                                     <label for="address">Address</label>
                                     <input type="text" class="form-control" id="address"  name="address">
