@@ -22,63 +22,7 @@ Route::get('/home', function () {
 });
 
 
-Route::prefix('categories')->group(function () {
-
-    Route::get('/', [
-        'as' => 'categories.index',
-        'uses' => 'App\Http\Controllers\CategoryController@index'
-    ]);
-
-    Route::get('/create', [
-        'as' => 'categories.create',
-        'uses' => 'App\Http\Controllers\CategoryController@create'
-    ]);
-
-    Route::post('/store', [
-        'as' => 'categories.store',
-        'uses' => 'App\Http\Controllers\CategoryController@store'
-    ]);
-
-    Route::get('/edit/{id}', [
-        'as' => 'categories.edit',
-        'uses' => 'App\Http\Controllers\CategoryController@edit'
-    ]);
-
-    Route::post('/update/{id}', [
-        'as' => 'categories.update',
-        'uses' => 'App\Http\Controllers\CategoryController@update'
-    ]);
-
-    Route::get('/delete/{id}', [
-        'as' => 'categories.delete',
-        'uses' => 'App\Http\Controllers\CategoryController@delete'
-    ]);
-});
-
-
-//Route::prefix('menus')->group(function () {
-//
-//    Route::get('/', [
-//        'as' => 'menus.index',
-//        'uses' => 'App\Http\Controllers\MenuController@index'
-//    ]);
-//
-//    Route::get('/create', [
-//        'as' => 'menus.create',
-//        'uses' => 'App\Http\Controllers\MenuController@create'
-//    ]);
-//
-//    Route::post('/store', [
-//        'as' => 'menus.store',
-//        'uses' => 'App\Http\Controllers\MenuController@store'
-//    ]);
-//});
-
-
-
-
-
-
+// Student
 Route::prefix('students')->group(function () {
 
     Route::get('/', [
@@ -112,7 +56,7 @@ Route::prefix('students')->group(function () {
     ]);
 });
 
-
+// Member
 Route::prefix('members')->group(function () {
 
     Route::get('/', [
@@ -145,3 +89,96 @@ Route::prefix('members')->group(function () {
         'uses' => 'App\Http\Controllers\MemberController@delete'
     ]);
 });
+
+// BorrowController
+Route::prefix('borrows')->group(function () {
+
+    Route::get('/', [
+        'as' => 'borrows.index',
+        'uses' => 'App\Http\Controllers\BorrowController@index'
+    ]);
+
+    Route::get('/create', [
+        'as' => 'borrows.create',
+        'uses' => 'App\Http\Controllers\BorrowController@create'
+    ]);
+
+    Route::post('/store', [
+        'as' => 'borrows.store',
+        'uses' => 'App\Http\Controllers\BorrowController@store'
+    ]);
+//
+//    Route::get('/edit/{id}', [
+//        'as' => 'members.edit',
+//        'uses' => 'App\Http\Controllers\MemberController@edit'
+//    ]);
+//
+//    Route::post('/update/{id}', [
+//        'as' => 'members.update',
+//        'uses' => 'App\Http\Controllers\MemberController@update'
+//    ]);
+//
+//    Route::get('/delete/{id}', [
+//        'as' => 'members.delete',
+//        'uses' => 'App\Http\Controllers\MemberController@delete'
+//    ]);
+});
+
+
+
+
+
+//---------------------------------SHOP----------------------
+
+
+//Route::prefix('categories')->group(function () {
+//
+//    Route::get('/', [
+//        'as' => 'categories.index',
+//        'uses' => 'App\Http\Controllers\CategoryController@index'
+//    ]);
+//
+//    Route::get('/create', [
+//        'as' => 'categories.create',
+//        'uses' => 'App\Http\Controllers\CategoryController@create'
+//    ]);
+//
+//    Route::post('/store', [
+//        'as' => 'categories.store',
+//        'uses' => 'App\Http\Controllers\CategoryController@store'
+//    ]);
+//
+//    Route::get('/edit/{id}', [
+//        'as' => 'categories.edit',
+//        'uses' => 'App\Http\Controllers\CategoryController@edit'
+//    ]);
+//
+//    Route::post('/update/{id}', [
+//        'as' => 'categories.update',
+//        'uses' => 'App\Http\Controllers\CategoryController@update'
+//    ]);
+//
+//    Route::get('/delete/{id}', [
+//        'as' => 'categories.delete',
+//        'uses' => 'App\Http\Controllers\CategoryController@delete'
+//    ]);
+//});
+
+
+//Route::prefix('menus')->group(function () {
+//
+//    Route::get('/', [
+//        'as' => 'menus.index',
+//        'uses' => 'App\Http\Controllers\MenuController@index'
+//    ]);
+//
+//    Route::get('/create', [
+//        'as' => 'menus.create',
+//        'uses' => 'App\Http\Controllers\MenuController@create'
+//    ]);
+//
+//    Route::post('/store', [
+//        'as' => 'menus.store',
+//        'uses' => 'App\Http\Controllers\MenuController@store'
+//    ]);
+//});

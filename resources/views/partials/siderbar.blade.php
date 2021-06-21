@@ -35,6 +35,14 @@
                     </p>
                 </a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('borrows.index') }}" class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                        Borrow
+                    </p>
+                </a>
+            </li>
         </ul>
         </nav>
         <!-- /.sidebar-menu -->
